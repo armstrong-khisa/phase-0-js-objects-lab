@@ -1,25 +1,42 @@
 //Write your code here
-let attendees = [
-    { id: 1, name: "Alice", event: "Tech Conference", ticketType: "VIP", ticketPrice: 100 },
-    { id: 2, name: "Bob", event: "Music Festival", ticketType: "Regular", ticketPrice: 50 }
-];
+// attendee object with correct properties
+let attendee = {
+  id: 1,
+  name: "Alice",
+  event: "Tech Conference",
+  ticketType: "VIP",
+  ticketPrice: 100
+};
 
-// Access
-console.log(attendees[0].name);
+// log name
+function logAttendeeName() {
+  console.log(attendee.name);
+}
 
-// Add
-attendees.push({ id: 3, name: "Charlie", event: "Art Expo", ticketType: "VIP", ticketPrice: 80 });
+// log ticket price
+function logTicketPrice() {
+  console.log(attendee.ticketPrice);
+}
 
-// Update
-attendees[1].ticketType = "VIP";
-attendees[1].ticketPrice = 75;
+// update ticket type
+function updateTicketType(newType) {
+  attendee.ticketType = newType;
+}
 
-// Remove
-attendees.splice(0, 1);
+// update ticket price
+function updateTicketPrice(newPrice) {
+  attendee.ticketPrice = newPrice;
+}
 
-// Final result
-console.log(attendees);
+// remove event property
+function removeEventProperty() {
+  delete attendee.event;
+}
 
+// add checkedIn property
+function addCheckedInProperty() {
+  attendee.checkedIn = true;
+}
 
 //Needed for the tests to work. Don't modify
 module.exports = {
